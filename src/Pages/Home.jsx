@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import axios from 'axios'; 
 import { MdDelete } from "react-icons/md";
 import Modal from '../component/Modal';  
+import { CiEdit } from "react-icons/ci";
+
 
 const Home = () => {
   const [items, setItems] = useState([]);
@@ -82,6 +84,12 @@ const Home = () => {
               >
                 <MdDelete />
               </button>
+              <Link to={`/edit/${item.id}`}>
+              <button className=' ms-2 bg-black hover:bg-gray-600 mt-3 text-white font-bold py-2 px-4 rounded' >
+              <CiEdit />
+
+              </button>
+                </Link>
             </div>
           </div>
         ))}

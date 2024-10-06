@@ -4,6 +4,7 @@ import App from '../App';
 import { createBrowserRouter } from "react-router-dom";
 import Home from '../Pages/Home';
 import Landingpage from '../Pages/Landingpage';
+import Edite from '../Pages/Edite';
 
 const Router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const Router = createBrowserRouter([
   {
     path:'/landingpage',
     element: <Landingpage />
+  },
+  {
+    path: "/edit/:id",
+    element: <Edite />,
   }
 
 ]);
