@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { IoArrowBackCircleSharp } from "react-icons/io5";
 
 const Add = () => {
   const [name, setName] = useState('');
@@ -38,8 +39,12 @@ const Add = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Add Product</h1>
+    <div className="container mx-auto  ">
+         <Link to="/landingpage">
+        <button className='  mt-2  w-14 h-14  hover:bg-indigo-500 hover:text-white text-indigo-500 font-bold     mx-auto text-center '><IoArrowBackCircleSharp />
+        </button>
+        </Link>
+   
 
       {/* Success message */}
       {successMessage && (
@@ -48,7 +53,8 @@ const Add = () => {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4 mt-10">
+      <h1 className="text-2xl font-bold mb-4">Add Avatar</h1>
         <input
           type="text"
           value={name}
@@ -75,13 +81,11 @@ const Add = () => {
           required
 
         />
-        <button type="submit" className="bg-blue-500 text-white p-2 rounded">
+        <button type="submit" className=" mb-10 border-2 border-indigo-500 hover:bg-indigo-500 hover:text-white text-indigo-500 font-bold    mx-auto text-center py-3 px-4">
           Add
         </button>
       </form>
-      <Link to="/home">
-        <button className="bg-blue-500 text-white p-2 rounded mt-4">Back to Home</button>
-        </Link>
+     
     </div>
   );
 };

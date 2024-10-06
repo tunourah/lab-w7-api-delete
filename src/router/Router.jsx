@@ -3,6 +3,7 @@ import Add from '../Pages/Add';
 import App from '../App';
 import { createBrowserRouter } from "react-router-dom";
 import Home from '../Pages/Home';
+import Landingpage from '../Pages/Landingpage';
 
 const Router = createBrowserRouter([
   {
@@ -14,9 +15,10 @@ const Router = createBrowserRouter([
     element: <Add />,
   },
   {
-    path:'/home',
-    element: <Home />
+    path:'/landingpage',
+    element: <Landingpage />
   }
+
 ]);
 
 export default Router;
