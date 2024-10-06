@@ -50,10 +50,10 @@ const Home = () => {
   );
 
   return (
-    <div className="container mx-auto p-4 mt-28 flex flex-col justify-center ">
+    <div className="container mx-auto p-4 mt-28 flex flex-col justify-center items-center w-full  ">
       <div>
         <Link to="/add">
-          <button className="border-2 border-indigo-500 hover:bg-indigo-500 hover:text-white text-indigo-500 font-bold w-full rounded-full mx-auto text-center py-3 px-4">
+          <button className="border-2 border-indigo-500 hover:bg-indigo-500 hover:text-white text-indigo-500 font-bold  md:w-96 rounded-full mx-auto text-center py-3 px-4">
             Add Product
           </button>
         </Link>
@@ -65,14 +65,14 @@ const Home = () => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="Search by name"
-          className="border p-2 w-full"
+          className="border p-2  md:w-96 rounded-md"
         />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
         {filteredItems.map(item => (
           <div key={item.id} className="bg-white border-2 border-indigo-500 shadow-md text-indigo-500 rounded-lg overflow-hidden">
-            <img src={item.image} alt={item.name} className="w-full h-48 object-cover" />
+            <img src={item.image} alt={item.name} className="w-full h-48 " />
             <div className="p-4">
               <h1 className="text-xl font-bold text-indigo-500 mb-2">{item.name}</h1>
               <p className="text-gray-600">{item.gender}</p>
