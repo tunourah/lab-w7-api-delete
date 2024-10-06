@@ -55,7 +55,7 @@ const Home = () => {
     <div className="container mx-auto p-4 mt-28 flex flex-col justify-center items-center w-full  ">
       <div>
         <Link to="/add">
-          <button className="border-2 border-indigo-500 hover:bg-indigo-500 hover:text-white text-indigo-500 font-bold  md:w-96 rounded-full mx-auto text-center py-3 px-4">
+          <button className="border-2 border-indigo-500  bg-indigo-500  text-white  font-bold  md:w-96 rounded-full mx-auto text-center py-3 px-4">
             Add Product
           </button>
         </Link>
